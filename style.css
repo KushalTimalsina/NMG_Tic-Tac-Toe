@@ -1,0 +1,128 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  margin-top: 30px;
+  background-color: #f4f7fa;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+#settings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#settings input, #settings select {
+  padding: 5px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#settings button {
+  padding: 8px 15px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #536dfe;
+  color: #fff;
+}
+
+#settings button:hover {
+  background-color: #3949ab;
+}
+
+#game {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 10px;
+  position: relative;
+}
+
+.cell {
+  width: 120px;
+  height: 120px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+  background-color: #e1f5fe;
+}
+
+.cell.X {
+  color: #ff5252;
+  transform: scale(1.2);
+  transition: all 0.2s ease;
+}
+
+.cell.O {
+  color: #536dfe;
+  transform: scale(1.2);
+  transition: all 0.2s ease;
+}
+
+#winner-line {
+  position: absolute;
+  height: 6px;
+  background-color: gold;
+  border-radius: 3px;
+  z-index: 10;
+  transform-origin: left center;
+  transition: all 0.5s ease;
+}
+
+#status {
+  margin-top: 20px;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #555;
+  min-height: 30px;
+}
+
+button#reset {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #536dfe;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+button#reset:hover {
+  background-color: #3949ab;
+  transform: scale(1.05);
+}
+
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 100;
+}
